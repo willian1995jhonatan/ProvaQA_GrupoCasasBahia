@@ -5,13 +5,13 @@ module.exports = defineConfig({
   reporterOptions: {
     reportDir: 'cypress/reports',
     overwrite: false,
-    html: false,
+    html: true,
     json: true,
   },
   e2e: {
-    baseUrl: 'http://localhost:3000', // ajuste para a URL da sua aplicação
+    baseUrl: 'http://localhost:3000', // ajuste se necessário
     setupNodeEvents(on, config) {
-      // aqui você pode adicionar event listeners, se necessário
+      // event listeners opcionais
     },
   },
 });
