@@ -1,0 +1,53 @@
+Funcionalidade: Cadastro de usuário
+
+Cenário 1: Cadastro de usuário com dados inválidos.
+  Given que o usuário clicou no botão "Registrar"
+  And preencheu o campo "E-mail" com um E-mail invalido
+  And preencheu o campo "Nome"
+  And preencheu o campo "Senha"
+  And preencheu o campo "Confirmação senha" com a mesma senha inserida no campo anterior
+  And ativou o switch "Criar conta com saldo?"
+  When o usuário clicar no botão "Cadastrar"
+  Then o sistema não deverá concluir o cadastro do e-mail exibindo "Formato Inválido"
+
+
+Funcionalidade: Transferência
+  
+Cenário 2: Transferência para uma conta inexistente.
+  Given que o usuário esteja logado em sua conta
+  And o usuário tenha o saldo de "1.000,00"
+  And clicou no botão "TRANSFERÊNCIA" disponível em sua conta
+  And preencheu o campo "Número da conta" com uma conta invalida
+  And preencheu o campo "Dígito" com um digito de uma conta invalida
+  And preencheu o campo "Valor da transferência"
+  And preencheu o campo "Descrição"
+  When o usuário clicar no botão "Transferir agora"
+  Then o sistema deverá exibir um pop-up com a mensagem "Conta inválida ou inexistente" impedindo que a transferência seja realizada
+  And o usuário deverá clicar no botão "Fechar" do pop-up para voltar a tela de Transferência
+
+Funcionalidade: Saque
+
+Cenário 3: Tentativa de saque sem saldo suficiente e verificação da mensagem de erro
+  Given que o usuário esteja logado em sua conta
+  And o usuário tenha o saldo de "800,00"
+  When o usuário clicar no botão "Saque"
+  And inserir o valor para saque de "1.000,00"
+  Then o sistema não deverá efetuar o saque exibindo a mensagem "O Valor inserido para saque é menor do que o saldo disponível em conta"
+
+
+Funcionalidade: Saldo
+
+Cenário 4: Verificação de saldo após transações
+  Given que o usuário esteja logado em sua conta
+  And o usuário tenha o saldo positivo de "1.000,00"
+  And clicou no botão "TRANSFERÊNCIA" disponível em sua conta
+  And preencheu o campo "Número da conta" com uma conta válida
+  And preencheu o campo "Dígito" com um digito de uma conta válida
+  And preencheu o campo "Valor da transferência" com "200"
+  And preencheu o campo "Descrição"
+  When o usuário clicar no botão "Transferir agora"
+  Then o sistema deverá exibir um pop-up com a mensagem "Transferencia realizada com sucesso"
+  And o usuário clicou em "Fechar" no pop-up
+  And clicou no botão "voltar"
+  Then o sistema deverá exibir o seu saldo atualizado de "800,00"
+  And o usuário dono da conta que o valor foi transferido deverá ter o seu saldo atualizado acrescentando 200,00 no campo "Saldo em conta"
