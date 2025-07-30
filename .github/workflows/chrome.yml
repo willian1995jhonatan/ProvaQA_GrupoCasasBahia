@@ -1,9 +1,9 @@
-name: CI - Testes Automatizados - Chrome
+name: E2E - Tests with Chrome
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 8 * * 1-5'
+    - cron: '0 11 * * 1-5'  # Executa às 08:00h no horário de Brasília (UTC-3)
   pull_request:
     branches:
       - main
