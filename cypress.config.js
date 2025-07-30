@@ -9,7 +9,7 @@ module.exports = defineConfig({
     json: true,
   },
   e2e: {
-    baseUrl: 'http://localhost:3000', // ajuste se necessário
+    baseUrl: 'https://bugbank.netlify.app/', // ajuste se necessário
     setupNodeEvents(on, config) {
       // event listeners opcionais
     },
