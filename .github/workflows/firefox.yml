@@ -58,14 +58,14 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: mochawesome-report-regression-firefox
-          path: ./public/regression
+          path: ./public/firefox/regression
 
       - name: Download Smoke Report
         uses: actions/download-artifact@v4
         with:
           name: mochawesome-report-smoke-firefox
-          path: ./public/smoke
-          
+          path: ./public/firefox/smoke
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
