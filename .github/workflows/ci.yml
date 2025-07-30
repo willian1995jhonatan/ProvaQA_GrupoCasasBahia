@@ -10,7 +10,7 @@ on:
 
 permissions:
   contents: write
-  
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -40,11 +40,11 @@ jobs:
       - name: Executar testes com Cypress
         run: |
           npx cypress run --browser $CYPRESS_BROWSER --env grepTags=$TEST_TAG
-          
+
       - name: Upload relatório mochawesome
         uses: actions/upload-artifact@v4
         with:
-          name: mochawesome-report
+          name: mochawesome-report-${{ matrix.tag }}-${{ matrix.browser }}
           path: cypress/reports
 
       - name: Publicar relatório no GitHub Pages
