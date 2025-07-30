@@ -3,7 +3,7 @@ name: E2E - Tests with Firefox
 on:
   workflow_dispatch:
   schedule:
-    - cron: '25 21 * * 1-5'  # Executa às 18:25h no horário de Brasília (UTC-3)
+    - cron: '0 22 * * 1-5'  # Executa às 19:00 BR (22:00 UTC) de segunda a sexta
   pull_request:
     branches:
       - main
