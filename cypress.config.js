@@ -1,19 +1,18 @@
 const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
-  reporter: 'mochawesome',
+  reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     reportDir: 'cypress/reports',
-    overwrite: false,
+    overwrite: true,
     html: true,
-    json: true,
+    json: false,
   },
   e2e: {
-    baseUrl: 'https://bugbank.netlify.app/', // ajuste se necessário
-    pageLoadTimeout: 120000, // aumenta o tempo de espera para 2 minutos
+    baseUrl: 'https://bugbank.netlify.app/',
+    pageLoadTimeout: 120000,
     setupNodeEvents(on, config) {
-      // event listeners opcionais
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
   },
 });
-
