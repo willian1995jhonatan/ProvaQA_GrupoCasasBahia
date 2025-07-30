@@ -7,6 +7,7 @@ module.exports = defineConfig({
     overwrite: true,
     html: true,
     json: false,
+    reportFilename: 'mochawesome',  // adiciona esta linha para nome fixo
   },
   e2e: {
     baseUrl: 'https://bugbank.netlify.app/',
