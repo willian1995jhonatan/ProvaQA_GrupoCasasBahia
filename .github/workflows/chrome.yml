@@ -69,7 +69,9 @@ jobs:
       - name: Mover relatórios para raiz
         run: |
           mv ./public/regression/mochawesome.html ./public/mochawesome-regression.html
+          mv ./public/regression/mochawesome_files ./public/mochawesome-regression_files || echo "Pasta de assets regression não existe"
           mv ./public/smoke/mochawesome.html ./public/mochawesome-smoke.html
+          mv ./public/smoke/mochawesome_files ./public/mochawesome-smoke_files || echo "Pasta de assets smoke não existe"
           rm -rf ./public/regression ./public/smoke
 
       - name: Criar index.html para GitHub Pages
@@ -104,4 +106,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-
