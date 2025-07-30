@@ -1,4 +1,4 @@
-name: E2E - Tests with FireFox
+name: E2E - Tests with Firefox
 
 on:
   workflow_dispatch:
@@ -47,9 +47,27 @@ jobs:
           name: mochawesome-report-${{ matrix.tag }}-firefox
           path: cypress/reports
 
-      - name: Publicar relatório no GitHub Pages
-        if: github.ref == 'refs/heads/main' && success()
+  publish-report:
+    needs: test-firefox
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Download Regression Report
+        uses: actions/download-artifact@v4
+        with:
+          name: mochawesome-report-regression-firefox
+          path: ./public/regression
+
+      - name: Download Smoke Report
+        uses: actions/download-artifact@v4
+        with:
+          name: mochawesome-report-smoke-firefox
+          path: ./public/smoke
+
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./cypress/reports
+          publish_dir: ./public
