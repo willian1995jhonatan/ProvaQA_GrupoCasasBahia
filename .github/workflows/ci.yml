@@ -1,28 +1,25 @@
-name: CI - Testes Automatizados
+name: CI - Testes Automatizados - Chrome
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '0 8 * * 1-5'   # Executa às 08:00h de segunda a sexta
+    - cron: '0 8 * * 1-5'
   pull_request:
     branches:
       - main
-  workflow_dispatch:        # Permite executar manualmente no GitHub
 
 permissions:
   contents: write
 
 jobs:
-  test:
+  test-chrome:
     runs-on: ubuntu-latest
-
-    # Matriz de parâmetros: tag e browser
     strategy:
       matrix:
-        tag: [regression, smoke]    # Tags de cenário que usar
-        browser: [chrome, firefox]  # Browsers suportados
+        tag: [regression, smoke]
 
     env:
-      CYPRESS_BROWSER: ${{ matrix.browser }}
+      CYPRESS_BROWSER: chrome
       TEST_TAG: ${{ matrix.tag }}
 
     steps:
@@ -44,7 +41,7 @@ jobs:
       - name: Upload relatório mochawesome
         uses: actions/upload-artifact@v4
         with:
-          name: mochawesome-report-${{ matrix.tag }}-${{ matrix.browser }}
+          name: mochawesome-report-${{ matrix.tag }}-chrome
           path: cypress/reports
 
       - name: Publicar relatório no GitHub Pages
