@@ -18,7 +18,7 @@ jobs:
     # Matriz de parâmetros: tag e browser
     strategy:
       matrix:
-        tag: [regression, smoke]    # Coloque as tags de cenário que usar
+        tag: [regression, smoke]    # Tags de cenário que usar
         browser: [chrome, firefox]  # Browsers suportados
 
     env:

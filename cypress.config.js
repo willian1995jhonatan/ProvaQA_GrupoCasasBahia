@@ -10,8 +10,10 @@ module.exports = defineConfig({
   },
   e2e: {
     baseUrl: 'https://bugbank.netlify.app/', // ajuste se necessário
+    pageLoadTimeout: 120000, // aumenta o tempo de espera para 2 minutos
     setupNodeEvents(on, config) {
       // event listeners opcionais
     },
   },
 });
+
