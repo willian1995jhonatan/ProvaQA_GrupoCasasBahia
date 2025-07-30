@@ -1,0 +1,52 @@
+name: CI - Testes Automatizados - Firefox
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 8 * * 1-5'
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  test-firefox:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        tag: [regression, smoke]
+
+    env:
+      CYPRESS_BROWSER: firefox
+      TEST_TAG: ${{ matrix.tag }}
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Executar testes com Cypress
+        run: |
+          npx cypress run --browser $CYPRESS_BROWSER --env grepTags=$TEST_TAG
+
+      - name: Upload relatório mochawesome
+        uses: actions/upload-artifact@v4
+        with:
+          name: mochawesome-report-${{ matrix.tag }}-firefox
+          path: cypress/reports
+
+      - name: Publicar relatório no GitHub Pages
+        if: github.ref == 'refs/heads/main' && success()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./cypress/reports
