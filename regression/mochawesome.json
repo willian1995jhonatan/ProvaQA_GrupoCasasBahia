@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2025-07-30T18:09:26.025Z",
-    "end": "2025-07-30T18:09:33.966Z",
-    "duration": 7941,
+    "start": "2025-07-30T18:10:23.420Z",
+    "end": "2025-07-30T18:10:31.870Z",
+    "duration": 8450,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c8e15303-5871-4f49-b8aa-4411eddca13c",
+      "uuid": "628308b6-75c4-4d4c-ae48-be1cdfcc2d86",
       "title": "",
       "fullFile": "cypress/e2e/bugbank.cy.js",
       "file": "cypress/e2e/bugbank.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "222ef562-f604-410d-8323-50e96f3a5147",
+          "uuid": "b97bc6ca-a2ab-4eca-a040-cfe2c2f4f1eb",
           "title": "login",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Cadastro de Usuário com Sucesso",
               "fullTitle": "login Cadastro de Usuário com Sucesso",
               "timedOut": null,
-              "duration": 2474,
+              "duration": 2581,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.get('.ihdmxA').click();\ncy.get(':nth-child(2) > .input__default').type('willian@gmail.com', {\n  force: true\n});\ncy.get(':nth-child(3) > .input__default').type('willian rocha', {\n  force: true\n});\ncy.get(':nth-child(4) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type('senha123', {\n  force: true\n});\ncy.get(':nth-child(5) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type('senha123', {\n  force: true\n});\ncy.get('label#toggleAddBalance').click({\n  force: true\n});\ncy.contains('Cadastrar').click({\n  force: true\n});\ncy.get('#modalText').contains(/^A conta \\d{1,3}-\\d foi criada com sucesso$/).should('be.visible');\ncy.contains('Fechar').click();",
               "err": {},
-              "uuid": "3380de3c-23bb-46a7-b928-1392dc94e44d",
-              "parentUUID": "222ef562-f604-410d-8323-50e96f3a5147",
+              "uuid": "449bdf53-d658-4a7a-b4dc-480423d97808",
+              "parentUUID": "b97bc6ca-a2ab-4eca-a040-cfe2c2f4f1eb",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Cadastro de usuário com dados inválidos",
               "fullTitle": "login Cadastro de usuário com dados inválidos",
               "timedOut": null,
-              "duration": 1281,
+              "duration": 1493,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.get('.ihdmxA').click();\ncy.get(':nth-child(2) > .input__default').type('willian', {\n  force: true\n});\ncy.get(':nth-child(3) > .input__default').type('willian rocha', {\n  force: true\n});\ncy.get(':nth-child(4) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type('senha123', {\n  force: true\n});\ncy.get(':nth-child(5) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type('senha123', {\n  force: true\n});\ncy.get('label#toggleAddBalance').click({\n  force: true\n});\ncy.contains('Cadastrar').click({\n  force: true\n});\ncy.get('.input__warging').should('contain.text', 'Formato inválido');",
               "err": {},
-              "uuid": "60a6af12-d165-43c9-9f58-f376f3594d93",
-              "parentUUID": "222ef562-f604-410d-8323-50e96f3a5147",
+              "uuid": "5b855512-7112-4342-95c6-c95bf7af9f44",
+              "parentUUID": "b97bc6ca-a2ab-4eca-a040-cfe2c2f4f1eb",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Transferência para uma conta inexistente",
               "fullTitle": "login Transferência para uma conta inexistente",
               "timedOut": null,
-              "duration": 4106,
+              "duration": 4274,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.get('.ihdmxA').click();\ncy.get(':nth-child(2) > .input__default').type('willian@gmail.com', {\n  force: true\n});\ncy.get(':nth-child(3) > .input__default').type('willian rocha', {\n  force: true\n});\ncy.get(':nth-child(4) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type('senha123', {\n  force: true\n});\ncy.get(':nth-child(5) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type('senha123', {\n  force: true\n});\ncy.get('label#toggleAddBalance').click({\n  force: true\n});\ncy.contains('Cadastrar').click({\n  force: true\n});\ncy.get('#modalText').contains(/^A conta \\d{1,3}-\\d foi criada com sucesso$/).should('be.visible');\ncy.contains('Fechar').click();\ncy.get('.style__ContainerFormLogin-sc-1wbjw6k-0 > :nth-child(1) > .input__default').type('willian@gmail.com');\ncy.get('.style__ContainerFormLogin-sc-1wbjw6k-0 > .login__password > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type('senha123');\ncy.get('.otUnI').click();\ncy.get('#textName').should('contain.text', 'willian rocha');\ncy.get('#textBalance > span').should('contain.text', '1.000,00');\ncy.get('#btn-TRANSFERÊNCIA').click();\ncy.get(':nth-child(1) > .input__default').type('12345');\ncy.get('.account__data > :nth-child(2) > .input__default').type('7');\ncy.get('.styles__ContainerFormTransfer-sc-1oow0wh-0 > :nth-child(2) > .input__default').type('200');\ncy.get(':nth-child(3) > .input__default').type('Descrição da Transação');\ncy.get('.style__ContainerButton-sc-1wsixal-0').click();\ncy.get('#modalText').should('have.text', 'Conta inválida ou inexistente');\ncy.contains('Fechar').click();",
               "err": {},
-              "uuid": "efa0aa53-30f1-4c86-9ae0-3d4ab419707f",
-              "parentUUID": "222ef562-f604-410d-8323-50e96f3a5147",
+              "uuid": "03609d70-4b37-46b7-a73f-c5eb4724ceea",
+              "parentUUID": "b97bc6ca-a2ab-4eca-a040-cfe2c2f4f1eb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3380de3c-23bb-46a7-b928-1392dc94e44d",
-            "60a6af12-d165-43c9-9f58-f376f3594d93",
-            "efa0aa53-30f1-4c86-9ae0-3d4ab419707f"
+            "449bdf53-d658-4a7a-b4dc-480423d97808",
+            "5b855512-7112-4342-95c6-c95bf7af9f44",
+            "03609d70-4b37-46b7-a73f-c5eb4724ceea"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 7861,
+          "duration": 8348,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
