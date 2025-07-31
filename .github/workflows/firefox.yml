@@ -1,9 +1,15 @@
 name: E2E - Tests with Firefox
 
 on:
-  push:
+  workflow_dispatch:
   schedule:
-    - cron: '0 20 * * *'  # Executa às 08:00 BR (11:00 UTC) de segunda a sexta
+    - cron: '0 23 * * 1-5'  # Executa às 08:00 BR (11:00 UTC) de segunda a sexta
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
