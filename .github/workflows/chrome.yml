@@ -3,7 +3,7 @@ name: E2E - Tests with Chrome
 on:
   workflow_dispatch:
     schedule:
-      - cron: '15 11 * * 1-5'  # Executa às 08:00 BR (22:00 UTC) de segunda a sexta
+      - cron: '0 12 * * 1-5'  # Executa às 08:00 BR (22:00 UTC) de segunda a sexta
   pull_request:
     branches:
       - main
