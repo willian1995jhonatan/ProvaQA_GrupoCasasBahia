@@ -133,8 +133,6 @@ npm run e2e:electron
 
 O projeto segue boas práticas recomendadas na [documentação oficial do Cypress](https://docs.cypress.io/app/core-concepts/best-practices#__docusaurus_skipToContent_fallback)
 
-# 🧱 Estrutura da Arquitetura do Projeto
-
 O projeto está estruturado para manter os testes organizados, reutilizáveis e fáceis de manter.
 
 ## 📁 Pastas e Arquivos
