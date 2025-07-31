@@ -133,3 +133,33 @@ npm run e2e:electron
 
 O projeto segue boas práticas recomendadas na [documentação oficial do Cypress](https://docs.cypress.io/app/core-concepts/best-practices#__docusaurus_skipToContent_fallback)
 
+# 🧱 Estrutura da Arquitetura do Projeto
+
+O projeto está estruturado para manter os testes organizados, reutilizáveis e fáceis de manter.
+
+## 📁 Pastas e Arquivos
+
+- `cypress/e2e/`: Contém os testes automatizados end-to-end escritos em JavaScript.
+- `cypress/fixtures/`: Contém arquivos JSON com dados utilizados nos testes.
+- `cypress/support/`: Armazena comandos personalizados e configurações globais.
+- `cypress.config.js`: Arquivo principal de configuração do Cypress.
+- `package.json`: Define as dependências, scripts e configurações do projeto.
+
+## ✅ Padrões adotados
+
+- Organização baseada no padrão Page Object Model (POM).
+- Seguindo o padrão AAA (Arrange, Act, Assert).
+- Testes independentes e fáceis de escalar.
+
+## 🧰 Tecnologias e Ferramentas
+
+- **Cypress** para testes E2E.
+- **Mochawesome** para geração de relatórios.
+- **GitHub Actions** para execução automatizada dos testes.
+
+## 🔁 Fluxo de Testes
+
+1. Instalação de dependências (`npm install` ou `yarn`)
+2. Execução dos testes via CLI (`npx cypress run`)
+3. Relatórios gerados automaticamente após execução
+4. Testes também são executados automaticamente via GitHub Actions (CI/CD)
