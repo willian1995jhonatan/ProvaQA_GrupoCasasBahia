@@ -1,11 +1,11 @@
 
-# Prova de QA – Grupo Casas Bahia
+<h1>Prova de QA – Grupo Casas Bahia</h1>
 
 Este repositório contém as minhas respostas e resolução de tarefas para o processo seletivo de Analista de Qualidade.
 
 ---
 
-## ✅ Pré-requisitos
+<h2>✅ Pré-requisitos</h2>
 
 É necessário ter o `Node.js`, `npm` e `Yarn` instalados para executar este projeto:
 
@@ -15,9 +15,9 @@ Este repositório contém as minhas respostas e resolução de tarefas para o pr
 
 ---
 
-## 🛠️ Projeto Bugbank
+<h2>🛠️ Projeto Bugbank</h2>
 
-### 📥 Baixando o projeto
+<h3>📥 Baixando o projeto</h3>
 
 Clone o repositório com o comando:
 
@@ -34,7 +34,7 @@ yarn
 
 ---
 
-### ▶️ Executando a aplicação
+<h3>▶️ Executando a aplicação</h3>
 
 Execute o projeto com o comando:
 
@@ -50,22 +50,22 @@ http://localhost:3000
 
 ---
 
-## 🧪 Instalação do Projeto de Testes Cypress
+<h2>🧪 Instalação do Projeto de Testes Cypress</h2>
 
-### 📥 Clonando o repositório de testes
+<h3>📥 Clonando o repositório de testes</h3>
 
 ```bash
 git clone https://github.com/willian1995jhonatan/ProvaQA_GrupoCasasBahia
 cd ProvaQA_GrupoCasasBahia
 ```
 
-### 📦 Instalando as dependências
+<h3>📦 Instalando as dependências</h3>
 
 ```bash
 npm install
 ```
 
-### 🔧 Configurando a URL
+<h3>🔧 Configurando a URL</h3>
 
 Edite o arquivo `cypress.env.json` e configure:
 
@@ -77,7 +77,7 @@ Edite o arquivo `cypress.env.json` e configure:
 
 ---
 
-### 🚀 Executando os testes
+<h3>🚀 Executando os testes</h3>
 
 ```bash
 npx cypress open
@@ -122,13 +122,13 @@ npm run e2e:electron
 
 ---
 
-## 📁 Evidências de Execução
+<h2>📁 Evidências de Execução</h2>
 
 - Os **relatórios de testes** estão disponíveis na pasta: `cypress/reports`
 - Os **vídeos das execuções** estão em: `cypress/videos`
 
 ---
 
-## 🧱 Arquitetura
+<h2>🧱 Arquitetura</h2>
 
 O projeto segue boas práticas recomendadas na [documentação oficial do Cypress](https://docs.cypress.io/app/core-concepts/best-practices#__docusaurus_skipToContent_fallback)
