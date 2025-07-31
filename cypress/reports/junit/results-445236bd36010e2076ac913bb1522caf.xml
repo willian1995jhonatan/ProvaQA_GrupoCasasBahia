@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="10.708" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-07-31T16:25:27" tests="0" file="cypress\e2e\bugbank.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="login" timestamp="2025-07-31T16:25:27" tests="3" time="10.706" failures="0">
+    <testcase name="login Cadastro de Usuário com Sucesso" time="3.550" classname="Cadastro de Usuário com Sucesso">
+    </testcase>
+    <testcase name="login Cadastro de usuário com dados inválidos" time="1.829" classname="Cadastro de usuário com dados inválidos">
+    </testcase>
+    <testcase name="login Transferência para uma conta inexistente" time="5.213" classname="Transferência para uma conta inexistente">
+    </testcase>
+  </testsuite>
+</testsuites>
