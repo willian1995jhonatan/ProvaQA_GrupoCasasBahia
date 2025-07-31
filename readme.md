@@ -143,12 +143,6 @@ O projeto está estruturado para manter os testes organizados, reutilizáveis e 
 - `cypress.config.js`: Arquivo principal de configuração do Cypress.
 - `package.json`: Define as dependências, scripts e configurações do projeto.
 
-## ✅ Padrões adotados
-
-- Organização baseada no padrão Page Object Model (POM).
-- Seguindo o padrão AAA (Arrange, Act, Assert).
-- Testes independentes e fáceis de escalar.
-
 ## 🧰 Tecnologias e Ferramentas
 
 - **Cypress** para testes E2E.
