@@ -2,7 +2,6 @@
   "name": "prova-qa-grupo-casas-bahia",
   "version": "1.0.0",
   "description": "Automação de testes de frontend para processo seletivo do Grupo Casas Bahia",
-
   "scripts": {
     "cy:open": "cypress open",
     "cy:open:mobile": "cypress open --config viewportWidth=410 viewportHeight=860",
@@ -21,10 +20,9 @@
     "url": ""
   },
   "author": "Willian Jhonatan Felix Rocha",
-
   "devDependencies": {
-    "cypress": "^14.5.2",
-    "cypress-mochawesome-reporter": "^3.8.1",
+    "cypress": "^14.5.3",
+    "cypress-mochawesome-reporter": "^3.8.4",
     "cypress-multi-reporters": "^1.6.4",
     "mocha-junit-reporter": "^2.2.1"
   }
