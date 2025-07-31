@@ -37,9 +37,14 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
+      - name: Listar binários instalados
+        run: ls -la ./node_modules/.bin/
+
+      - name: Dar permissão ao Cypress
+        run: chmod +x ./node_modules/.bin/cypress
+
       - name: Executar testes com Cypress
-        run: |
-          npx cypress run --browser $CYPRESS_BROWSER --env grepTags=$TEST_TAG
+        run: npx cypress run --browser $CYPRESS_BROWSER --env grepTags=$TEST_TAG
 
       - name: Upload relatório mochawesome
         uses: actions/upload-artifact@v4
@@ -95,17 +100,4 @@ jobs:
             <h1>Relatórios de Teste - Cypress + Mochawesome</h1>
             <ul>
               <li><a href="mochawesome-regression.html" target="_blank">🔍 Ver Relatório Regression</a></li>
-              <li><a href="mochawesome-smoke.html" target="_blank">🚀 Ver Relatório Smoke</a></li>
-            </ul>
-          </body>
-          </html>
-          EOF
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          # publish_branch: gh-pages  # opcional, só defina se quiser mudar o branch padrão
-          # force_orphan: true         # opcional para forçar deploy limpo
-
+              <li><a href="mochawesome-smoke.html" target="_blank">🚀 Ver Re_

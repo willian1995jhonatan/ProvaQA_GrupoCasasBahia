@@ -31,9 +31,14 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
+      - name: Listar binários instalados
+        run: ls -la ./node_modules/.bin/
+
+      - name: Dar permissão ao Cypress
+        run: chmod +x ./node_modules/.bin/cypress
+
       - name: Executar testes com Cypress
-        run: |
-          npx cypress run --browser $CYPRESS_BROWSER --env grepTags=$TEST_TAG
+        run: npx cypress run --browser $CYPRESS_BROWSER --env grepTags=$TEST_TAG
 
       - name: Upload relatório mochawesome
         uses: actions/upload-artifact@v4
@@ -100,5 +105,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          # publish_branch: gh-pages  # opcional
-          # force_orphan: true         # opcional
