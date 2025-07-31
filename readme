@@ -1,112 +1,135 @@
-<h1>Prova de QA – Grupo Casas Bahia</h1>
+# Prova de QA – Grupo Casas Bahia
 
-<p>Este repositório contém as minhas respostas e resolução de tarefas para o processo seletivo de Analista de Qualidade.</p>
 
-<hr />
+Este repositório contém as minhas respostas e resolução de tarefas para o processo seletivo de Analista de Qualidade.
 
-<h2>✅ Pré-requisitos</h2>
+---
 
-<p>É necessário ter o <code>Node.js</code>, <code>npm</code> e <code>Yarn</code> instalados para executar este projeto:</p>
+## ✅ Pre-requisitos
 
-<ul>
-  <li><code>Node.js</code> versão <code>22.15.1</code></li>
-  <li><code>npm</code> versão <code>10.9.2</code></li>
-  <li><code>Yarn</code> versão <code>1.22.22</code></li>
-</ul>
+É necessário ter o **Node.js**, **npm** e **Yarn** instalados para executar este projeto:
 
-<hr />
+- **Node.js** versão `22.15.1`
+- **NPM** versão `10.9.2`
+- **Yarn** versão `1.22.22`
 
-<h2>🛠️ Projeto Bugbank</h2>
+---
 
-<h3>📥 Baixando o projeto</h3>
+## 🛠️ Projeto Bugbank
 
-<p>Clone o repositório com o comando:</p>
+### 📥 Baixando o projeto
 
-<pre><code>git clone https://github.com/jhonatasmatos/bugbank.git
+Clone o repositório com o comando:
+
+```bash
+git clone https://github.com/jhonatasmatos/bugbank.git
+```
+
+Acesse a pasta do projeto e instale as dependências:
+
+```bash
 cd bugbank
 yarn
-</code></pre>
+```
 
-<hr />
+---
 
-<h3>▶️ Executando a aplicação</h3>
+### ▶️ Executando a aplicação
 
-<pre><code>yarn dev
-</code></pre>
+Execute o projeto com o comando:
 
-<p>Abra o navegador e acesse: <code>http://localhost:3000</code></p>
+```bash
+yarn dev
+```
 
-<hr />
+Abra o navegador e acesse:
 
-<h2>🧪 Instalação do Projeto de Testes Cypress</h2>
+```
+http://localhost:3000
+```
 
-<h3>📥 Clonando o repositório de testes</h3>
+---
 
-<pre><code>git clone https://github.com/willian1995jhonatan/ProvaQA_GrupoCasasBahia
+## 🧪 Instalação do Projeto de Testes Cypress
+
+### 📥 Clonando o repositório de testes
+
+```bash
+git clone https://github.com/willian1995jhonatan/ProvaQA_GrupoCasasBahia
 cd ProvaQA_GrupoCasasBahia
-</code></pre>
+```
 
-<h3>📦 Instalando as dependências</h3>
+### 📦 Instalando as dependências
 
-<pre><code>npm install
-</code></pre>
+```bash
+npm install
+```
 
-<h3>🔧 Configurando a URL</h3>
+### 🔧 Configurando a URL
 
-<p>Edite o arquivo <code>cypress.env.json</code> e configure:</p>
+Edite o arquivo `cypress.env.json` e configure:
 
-<pre><code>{
+```json
+{
   "baseUrl": "http://localhost:3000/"
 }
-</code></pre>
+```
 
-<hr />
+---
 
-<h3>🚀 Executando os testes</h3>
+### 🚀 Executando os testes
 
-<pre><code>npx cypress open
-</code></pre>
+```bash
+npx cypress open
+```
 
-<p>Na interface do Cypress:</p>
-<ol>
-  <li>Selecione o navegador desejado.</li>
-  <li>Clique sobre o arquivo <code>bugbank.cy.js</code> para iniciar os testes.</li>
-</ol>
+Na interface do Cypress:
 
-<p>Caso queira executar apenas via CLI utilize o comando:</p>
+1. Selecione o navegador desejado.
+2. Clique sobre o arquivo `bugbank.cy.js` para iniciar os testes.
 
-<pre><code>npm test
-</code></pre>
+Caso queira executar apenas via CLI utilize o comando:
 
-<h4>Testando localmente com outros navegadores</h4>
+```bash
+npm test
+```
 
-<p><strong>Firefox</strong></p>
-<pre><code>npm run e2e:firefox
-</code></pre>
+Testando localmente com outros navegadores
 
-<p><strong>Edge</strong></p>
-<pre><code>npm run e2e:edge
-</code></pre>
+Firefox
 
-<p><strong>Chrome</strong></p>
-<pre><code>npm run e2e:chrome
-</code></pre>
+```bash
+npm run e2e:firefox
+```
 
-<p><strong>Electron</strong></p>
-<pre><code>npm run e2e:electron
-</code></pre>
+Edge
 
-<hr />
+```bash
+npm run e2e:edge
+```
 
-<h2>📁 Evidências de Execução</h2>
+Chrome
 
-<ul>
-  <li>Os <strong>relatórios de testes</strong> estão disponíveis na pasta: <code>cypress/reports</code></li>
-  <li>Os <strong>vídeos das execuções</strong> estão em: <code>cypress/videos</code></li>
-</ul>
+```bash
+npm run e2e:chrome
+```
 
-<hr />
+Electron
 
-<h2>🧱 Arquitetura</h2>
+```bash
+npm run e2e:electron
+```
 
-<p>O projeto segue boas práticas recomendadas na <a href="https://docs.cypress.io/app/core-concepts/best-practices#__docusaurus_skipToContent_fallback">documentação oficial do Cypress</a></p>
+---
+
+## 📁 Evidências de Execução
+
+- Os **relatórios de testes** estão disponíveis na pasta: `cypress/reports`
+- Os **vídeos das execuções** estão em: `cypress/videos`
+
+---
+
+## 🧱 Arquitetura
+
+O projeto segue boas práticas recomendadas na [documentação oficial do Cypress](https://docs.cypress.io/app/core-concepts/best-practices#__docusaurus_skipToContent_fallback)
+
