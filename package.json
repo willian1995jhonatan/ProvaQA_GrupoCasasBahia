@@ -1,18 +1,31 @@
 {
-  "name": "cypress",
+  "name": "prova-qa-grupo-casas-bahia",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Automação de testes de frontend para processo seletivo do Grupo Casas Bahia",
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open",
+    "cy:open:mobile": "cypress open --config viewportWidth=410 viewportHeight=860",
+    "test": "cypress run",
+    "test:mobile": "cypress run --config viewportWidth=410 viewportHeight=860",
+    "e2e:chrome": "cypress run --browser chrome",
+    "e2e:firefox": "cypress run --browser firefox",
+    "e2e:electron": "cypress run --browser electron",
+    "e2e:edge": "cypress run --browser edge",
+    "e2e:chrome:headed": "cypress run --browser chrome --headed",
+    "e2e:firefox:headed": "cypress run --browser firefox --headed",
+    "e2e:edge:headed": "cypress run --browser edge --headed"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Willian Jhonatan Felix Rocha",
+
   "devDependencies": {
-    "@faker-js/faker": "^9.8.0",
-    "cypress": "^14.4.0",
-    "cypress-mochawesome-reporter": "^4.0.0",
-    "mochawesome": "^7.1.3"
+    "cypress": "^14.5.2",
+    "cypress-mochawesome-reporter": "^3.8.1",
+    "cypress-multi-reporters": "^1.6.4",
+    "mocha-junit-reporter": "^2.2.1"
   }
 }
