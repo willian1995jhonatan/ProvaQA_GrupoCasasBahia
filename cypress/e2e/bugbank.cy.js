@@ -4,7 +4,7 @@ describe('login',() =>{
 
 beforeEach(() => {
 
-cy.visit('https://bugbank.netlify.app/')
+cy.visit('/')
 cy.get('#__next > div > div > h1')
 .should('be.visible')
 .should('have.text', 'O banco com bugs e falhas do seu jeito')

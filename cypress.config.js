@@ -9,11 +9,11 @@ module.exports = defineConfig({
     json: false,
     reportFilename: 'mochawesome',  // adiciona esta linha para nome fixo
   },
-  e2e: {
-    baseUrl: 'https://bugbank.netlify.app/',
-    pageLoadTimeout: 120000,
+e2e: {
     setupNodeEvents(on, config) {
-      require('cypress-mochawesome-reporter/plugin')(on);
+      require('cypress-mochawesome-reporter/plugin')(on)
+      config.baseUrl = config.env.baseUrl;
+      return config;
     },
   },
 });
