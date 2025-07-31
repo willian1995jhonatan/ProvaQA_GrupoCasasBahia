@@ -37,14 +37,14 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
+      - name: Dar permissão ao Cypress
+        run: chmod +x ./node_modules/.bin/cypress
+
       - name: Instalar binário do Cypress
         run: npx cypress install
 
       - name: Listar binários instalados
         run: ls -la ./node_modules/.bin/
-
-      - name: Dar permissão ao Cypress
-        run: chmod +x ./node_modules/.bin/cypress
 
       - name: Executar testes com Cypress
         run: npx cypress run --browser $CYPRESS_BROWSER --env grepTags=$TEST_TAG
