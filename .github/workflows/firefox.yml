@@ -3,7 +3,7 @@ name: E2E - Tests with Firefox
 on:
   push:
   schedule:
-    - cron: '0 11 * * 1-5'  # Executa às 08:00 BR (11:00 UTC) de segunda a sexta
+    - cron: '0 20 * * *'  # Executa às 08:00 BR (11:00 UTC) de segunda a sexta
 
 permissions:
   contents: write
