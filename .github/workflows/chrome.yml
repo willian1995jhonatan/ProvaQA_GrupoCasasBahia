@@ -2,8 +2,8 @@ name: E2E - Tests with Chrome
 
 on:
   workflow_dispatch:
-    schedule:
-      - cron: '0 12 * * 1-5'  # Executa às 08:00 BR (22:00 UTC) de segunda a sexta
+  schedule:
+    - cron: '0 11 * * 1-5'  # Executa às 08:00 BR (11:00 UTC) de segunda a sexta
   pull_request:
     branches:
       - main
@@ -106,3 +106,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          # publish_branch: gh-pages  # opcional, só defina se quiser mudar o branch padrão
+          # force_orphan: true         # opcional para forçar deploy limpo
+
