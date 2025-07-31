@@ -37,6 +37,9 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
+      - name: Instalar binário do Cypress
+        run: npx cypress install
+
       - name: Listar binários instalados
         run: ls -la ./node_modules/.bin/
 
@@ -100,4 +103,14 @@ jobs:
             <h1>Relatórios de Teste - Cypress + Mochawesome</h1>
             <ul>
               <li><a href="mochawesome-regression.html" target="_blank">🔍 Ver Relatório Regression</a></li>
-              <li><a href="mochawesome-smoke.html" target="_blank">🚀 Ver Re_
+              <li><a href="mochawesome-smoke.html" target="_blank">🚀 Ver Relatório Smoke</a></li>
+            </ul>
+          </body>
+          </html>
+          EOF
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
