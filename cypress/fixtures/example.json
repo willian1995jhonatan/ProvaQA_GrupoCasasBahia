@@ -1,12 +1,12 @@
 {
   "usuarioValido": {
-    "email": "teste@teste.com",
-    "nome": "Carlos da Silva",
-    "senha": "123@Xyz"
+    "email": "willian@teste.com",
+    "nome": "Willian rocha",
+    "senha": "123@1234"
   },
   "usuarioSemNome": {
-    "email": "teste@teste.com",
-    "senha": "123@Xyz"
+    "email": "willian@teste.com",
+    "senha": "123@1234"
   }
 }
 
