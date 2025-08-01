@@ -120,6 +120,7 @@ Electron
 npm run e2e:electron
 ```
 
+Obs: Os Cenários de Teste (Gherkin) estão no caminho: ProvaQA_GrupoCasasBahia\cypress\features
 ---
 
 ## 📁 Evidências de Execução

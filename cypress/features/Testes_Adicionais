@@ -5,7 +5,7 @@ Cenário 1: Cadastro de usuário com dados inválidos.
   And preencheu o campo "E-mail" com um e-mail inválido
   And preencheu o campo "Nome" corretamente
   And preencheu o campo "Senha"
-  And preencheu o campo "Confirmação de senha" com o mesmo valor da senha
+  And preencheu o campo "Confirmação de senha" com o mesmo valor do campo Senha
   And ativou o switch "Criar conta com saldo?"
   When o usuário clicar no botão "Cadastrar"
   Then o sistema deverá exibir a mensagem "Formato Inválido" e não concluir o cadastro
